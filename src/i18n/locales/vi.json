@@ -1,0 +1,59 @@
+{
+  "home": {
+    "title": "Home",
+    "intro": {
+      "title": "Hello <br />  I'm Jenn <br /> Walkers"
+    },
+    "section": {
+      "intro": {
+        "title": "Hoạt động",
+        "description": "Mauris volutpat estera phasellus varius nec orci, quam augue se loremes lines pellentesque non",
+        "link": "View more"
+      },
+      "intro2": {
+        "title": "Hoạt động 2",
+        "description": "Volutpat estera phasellus varius nec orci, quam augue se loremes lines pellentesque non mareque",
+        "link": "View more"
+      },
+      "skill": {
+        "title": "Nam ultrices ultrices nec tortor pulvinar esteras loremips estorem ipusm",
+        "content1": "Mauris volutpat estera phasellus. Varius nec orcina quam augue loremes lines rester pellentesque non estar identiqum pere setarra nunc vulputate id in nullam lorem ipsum dolor setarra nunc vulputateester.",
+        "content2": "Tristique amet volutpat nunc euismod mauris nonce ollicitudin est sempe vulputate id in nullam. Purusat tincidunt maga ut turpis eu, eu enim. Nisl porttitor elit risus velit urnase morbit mauris at proin laoreet est lobortis urna aliquame setera fermentum sit iaculis"
+      },
+      "ref": {
+        "ref1": {
+          "content": "Duis iaculis vulputate mauris, vitae ultricies nunc sodales et. Nunc at pin laoreet est lobortis est report.placerat vulputate malesuad tempus erat si",
+          "author": "Jenny Stone",
+          "link": "www.somesite.com"
+        }
+      },
+      "contact": {
+        "title": "Contact",
+        "content": {
+          "title": "Nam ultrices ultrices nec tortor pulvinar esteras loremips est orem ipusm mupolis tetoros.",
+          "content1": "Mauris volutpat estera phasellus varius nec orcina quam augue loremes lines rester pellentesque non estar identiqum pere setarra nunc vulputate id in nullam polo lorem ipsum dolor setarra nunc vulputa teestertuos.",
+          "content2": "Nunc mollis lectus sed tellus aliquet, eu molestie mi venenatis aliquam id nisi efficitur, tincidunt dui a, rhomi sed felis nisi, varius eu porta ut, rutrum nonipus turos eto."
+        }
+      }
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Your email"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Subject"
+      },
+      "message": {
+        "label": "Message"
+      },
+      "submit": "Send message"
+    }
+  },
+  "locale": "vi"
+}

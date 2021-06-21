@@ -1,0 +1,199 @@
+$container-padding-horizontal: fn.rem(36);
+
+.page-max-container {
+  max-width: fn.rem(1610);
+  margin: 0 auto;
+}
+
+.page-container {
+  max-width: fn.rem(1275) + ($container-padding-horizontal * 2);
+  margin: 0 auto;
+}
+
+.page-min-container {
+  max-width: fn.rem(848) + ($container-padding-horizontal * 2);
+  padding: 0 $container-padding-horizontal;
+  margin: 0 auto;
+
+  .page-container {
+    max-width: fn.rem(848);
+    padding: 0;
+  }
+}
+
+.hidden-desktop {
+  @include mx.mq($BREAKPOINT-LG) {
+    display: none;
+  }
+}
+
+.hidden-mobile {
+  @media screen and (max-width: ($BREAKPOINT-MD - 1) * 1px) {
+    display: none;
+  }
+}
+
+.\--txt-uppercase {
+  text-transform: uppercase;
+}
+
+.\--txt-center {
+  text-align: center;
+}
+
+.\--txt-right {
+  text-align: right;
+}
+
+.\--txt-left {
+  text-align: left;
+}
+
+.\--txt-done-decoration {
+  text-decoration: none;
+}
+
+.\--main-bg {
+  background-color: colors.$white-1;
+}
+
+.\--strong {
+  @include mx.font-poppins-bold;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.bar-menu {
+  $this: &;
+
+  display: flex;
+  align-items: center;
+  width: fn.rem(25);
+  height: fn.rem(22);
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: fn.rem(3);
+    background-color: colors.$color-bar-menu-line;
+    border-radius: fn.rem(3);
+    transition: transform .2s ease-in;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &.\--active {
+    &::before, &::after {
+      top: fn.rem(11);
+    }
+
+    &::before {
+      transform: rotate3d(0,0,1,45deg) translate3d(0,0,0);
+    }
+
+    &::after {
+      transform: rotate3d(0,0,-1,45deg) translate3d(0,0,0);
+    }
+
+    & #{$this}__line {
+      display: none;
+    }
+  }
+  
+  &__line {
+    width: 100%;
+    height: fn.rem(3);
+    background-color: colors.$color-bar-menu-line;
+    border-radius: fn.rem(3);
+  }
+}
+
+.title, h1,h2,h3, h4,h5 {
+  margin: 0;
+
+  @include mx.font-poppins-bold;
+}
+
+.section {
+  &.\--pd {
+    @include mx.mq($BREAKPOINT-LG) {
+      padding: 0 fn.rem(230);
+    }
+  }
+}
+
+.\--link {
+  $this: &;
+
+  position: relative;
+  text-decoration: none;
+  color: colors.$color-link-txt;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: fn.rem(3);
+
+  &::before {
+    overflow: hidden;
+    content: '';
+    position: absolute;
+    height: fn.rem(2);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: colors.$color-link-txt;
+    transition: left .2s ease-in;
+  }
+
+  &.\--white {
+    &::before {
+      background-color: colors.$white-1;
+    }
+  }
+
+  &:hover {
+    color: colors.$color-link-txt-hover;
+
+    &::before {
+      left: -80%;
+      background-color: colors.$color-link-txt-hover;
+    }
+  }
+}
+
+.\--full {
+  display: block;
+  width: 100%;
+}
+
+section, .\--section {
+  position: relative;
+  padding: fn.rem(50) 0 0;
+
+  @include mx.mq($BREAKPOINT-LG) {
+    margin-top: fn.rem(100);
+    padding-top: fn.rem(100);
+    padding-bottom: fn.rem(100);
+  }
+}
+
+.richtext {
+  p {
+    margin-bottom: fn.rem(15);
+  }
+}
