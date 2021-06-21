@@ -78,10 +78,14 @@ export default {
     top: 0;
     position: fixed;
     z-index: 3;
-    left: calc(100% - 460px);
+    left: calc(100% - 230px);
 
     @include mx.mq($BREAKPOINT-LG) {
       display: block;
+    }
+
+    @include mx.mq($BREAKPOINT-XXL) {
+      left: calc( 100% - (((100% - 1320px) / 2) + 230px));
     }
 
     &__container {
