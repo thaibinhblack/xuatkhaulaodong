@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <div class="section-services__container section --pd">
         <custom-section
-          title="Svcs"
+          :title="$t('home.section.services.label')"
           class="section-services__container"
           hideLeft
         >

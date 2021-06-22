@@ -143,6 +143,13 @@ export default {
     }
   }
 
+  .custom-section__main {
+    @include mx.mq($BREAKPOINT-LG) {
+      padding-right: 0;
+      padding-left: fn.rem(70)
+    }
+  }
+
   &__card-content {
     margin: fn.rem(15) 0 fn.rem(25);
   }

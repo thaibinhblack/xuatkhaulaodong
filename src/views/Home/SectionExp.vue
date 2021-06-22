@@ -3,7 +3,7 @@
     <div class="container-xxl">
         <div class="section-exp__container section --pd">
         <custom-section
-          title="Exp"
+          :title="$t('home.section.exp.label')"
           hideLeft
         >
           <custom-table

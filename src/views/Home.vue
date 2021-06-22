@@ -20,7 +20,19 @@
     </div>
     <section-about />
     <section-services />
-    <section-intro />
+    <u-animate-container>
+      <u-animate
+        name="fadeIn"
+        delay="0s"
+        duration="1s"
+        :iteration="1"
+        :offset="0"
+        animateClass="animated"
+        :begin="false"
+      >
+        <section-intro />
+      </u-animate>
+    </u-animate-container>
     <section-skill />
     <section-exp />
     <section-blog />

@@ -88,6 +88,9 @@
         </div>
       </div>
     </div>
+    <div class="section-about__bg-container --left">
+      <div class="section-about__bg"></div>
+    </div>
   </section>
 </template>
 

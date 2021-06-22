@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <div class="section-skill__container section --pd">
         <custom-section
-          title="Skills"
+          :title="$t('home.section.skill.label')"
           class="section-skill__container"
         >
           <template #left>

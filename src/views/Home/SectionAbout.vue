@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <div class="section-about__container section --pd">
         <custom-section
-          title="About"
+          :title="$t('home.section.about.label')"
           class="section-about__container"
         >
           <template #left>
@@ -194,6 +194,7 @@ export default {
   }
 
   &__bg {
+    transform: translateZ(1);
     padding-top: 100%;
     border-radius: 90%;
     background-color: colors.$color-custom-section-bg-right;

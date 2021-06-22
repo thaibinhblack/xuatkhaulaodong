@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <div class="section-intro__container section --pd">
         <custom-section
-          title="Portfolio"
+          :title="$t('home.section.intro.label')"
           class="section-intro__container"
         >
           <template #left>
