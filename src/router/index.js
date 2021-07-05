@@ -10,6 +10,10 @@ const routes = [
     meta: {
       title: 'Hom'
     }
+  },
+  {
+    path: '/wow',
+    component: () => import(/* Webpackchunk Wow */ '@/views/Wow'),
   }
 ];
 const router = new VueRouter({

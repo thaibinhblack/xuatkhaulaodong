@@ -7,9 +7,14 @@
         :key="index"
         class="custom-list-services__item col-lg-6"
       >
-        <span class="custom-list-services__txt">
-          {{item.name}}
-        </span>
+        <u-animate
+          name="fadeInUp"
+          :duration="`${0.5 + (index * 0.5)}s`"
+        >
+          <span class="custom-list-services__txt">
+            {{item.name}}
+          </span>
+        </u-animate>
       </li>
     </ul>
   </div>

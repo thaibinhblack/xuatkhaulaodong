@@ -1,13 +1,18 @@
 <template>
   <div class="custom-section">
-    <div
-      class="custom-section__label-container"
-      ref="label"
+    <u-animate
+      name="bounceInLeft"
+      duration=".5s"
     >
-      <h2 class="custom-section__label">
-        {{title}}
-      </h2>
-    </div>
+      <div
+        class="custom-section__label-container"
+        ref="label"
+      >
+        <h2 class="custom-section__label">
+          {{title}}
+        </h2>
+      </div>
+    </u-animate>
     <div class="row custom-section__container">
       <div
         :class="{

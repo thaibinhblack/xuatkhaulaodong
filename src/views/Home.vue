@@ -1,51 +1,55 @@
 <template>
   <div class="page-home">
-    <div class="container-xxl">
-      <header class="page-home__header">
-        <div class="row">
-          <hero
-            :srcImage="srcHero"
-            v-bind="hero"
-            hasMenu
-          />
-          <the-menu-top
-            v-model="menus"
-          />
-          <the-menu
-            v-model="menus"
-            class="page-home__menu"
-          />
-        </div>
-      </header>
-    </div>
-    <section-about />
-    <section-services />
-    <u-animate-container>
+    <u-animate-container
+      class="--pd-0 --mr-0"
+      el="div"
+      :target="getTarget"
+    >
+      <header-home />
+    </u-animate-container>
+    <u-animate-container class="--pd-0 --mr-0">
+      <section-about />
+    </u-animate-container>
+    <u-animate-container class="--pd-0 --mr-0">
+      <section-services />
+    </u-animate-container>
+    <u-animate-container class="--pd-0 --mr-0">
       <u-animate
-        name="fadeIn"
-        delay="0s"
-        duration="1s"
-        :iteration="1"
-        :offset="0"
-        animateClass="animated"
-        :begin="false"
+          name="pulse"
+        class="wow bg-red"
+        :iteration="5"
+        duration="0.15s"
       >
         <section-intro />
       </u-animate>
     </u-animate-container>
-    <section-skill />
-    <section-exp />
-    <section-blog />
-    <section-ref />
-    <section-contact />
+    <u-animate-container class="--pd-0 --mr-0">
+      <section-skill />
+    </u-animate-container>
+    <u-animate-container class="--pd-0 --mr-0">
+      <u-animate
+        name="pulse"
+        class="wow bg-red"
+        :iteration="5"
+        duration="0.15s"
+      >
+        <section-exp />
+      </u-animate>
+    </u-animate-container>
+    <u-animate-container class="--pd-0 --mr-0">
+      <section-blog />
+    </u-animate-container>
+    <u-animate-container class="--pd-0 --mr-0">
+      <section-ref />
+    </u-animate-container>
+    <u-animate-container class="--pd-0 --mr-0">
+      <section-contact />
+    </u-animate-container>
   </div>
 </template>
 
 <script>
-import Hero from '@/components/stateless/Hero';
-import srcHero from '@/assets/images/hero/main_img.jpg';
-import TheMenu from '@/components/stateless/TheMenu';
-import TheMenuTop from '@/components/stateless/TheMenuTop';
+import HeaderHome from '@/views/Home/HeaderHome';
 import SectionAbout from '@/views/Home/SectionAbout';
 import SectionServices from '@/views/Home/SectionServices';
 import SectionIntro from '@/views/Home/SectionIntro';
@@ -59,9 +63,7 @@ export default {
   name: 'Home',
 
   components: {
-    Hero,
-    TheMenu,
-    TheMenuTop,
+    HeaderHome,
     SectionAbout,
     SectionServices,
     SectionIntro,
@@ -72,31 +74,17 @@ export default {
     SectionContact,
   },
 
-  data: () => ({
-    srcHero,
-    hero: {
-      description: 'UI designer, photographer and travel enthusiast'
-    },
-    menus: [
-      {
-        name: 'Home',
-        active: true,
-      },
-      {
-        name: 'About',
-        active: false,
-      },
-      {
-        name: 'Services',
-        active: false,
-      }
-    ]
-  })
+  methods: {
+    getTarget() {
+      return this.$el;
+    }
+  }
 };
 </script>
 
 <style lang="scss">
   .page-home {
+    margin: 0;
     padding-top: fn.rem(65);
     overflow: hidden;
 

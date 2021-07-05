@@ -9,23 +9,32 @@
           >
             <template #left>
               <div class="section-ref__list-card --left">
-                <div class="section-ref__item-card">
-                  <custom-card-ref class="section-ref__card">
-                    <div class="section-ref__card-content richtext">
-                      <p class="section-ref__card-txt">
-                        {{ $t('home.section.ref.ref1.content') }}
-                      </p>
-                    </div>
-                    <div class="section-ref__card-author">
-                      <span class="--strong">
-                        {{ $t('home.section.ref.ref1.author') }}
-                      </span>
-                      <span class="--full section-ref__card-link">
-                        {{ $t("home.section.ref.ref1.link") }}
-                      </span>
-                    </div>
-                  </custom-card-ref>
-                </div>
+                <u-animate
+                  name="bounceInLeft"
+                  duration=".5s"
+                >
+                  <div class="section-ref__item-card">
+                    <custom-card-ref class="section-ref__card">
+                      <div class="section-ref__card-content richtext">
+                        <p class="section-ref__card-txt">
+                          {{ $t('home.section.ref.ref1.content') }}
+                        </p>
+                      </div>
+                      <div class="section-ref__card-author">
+                        <span class="--strong">
+                          {{ $t('home.section.ref.ref1.author') }}
+                        </span>
+                        <span class="--full section-ref__card-link">
+                          {{ $t("home.section.ref.ref1.link") }}
+                        </span>
+                      </div>
+                    </custom-card-ref>
+                  </div>
+                </u-animate>
+                <u-animate
+                  name="bounceInLeft"
+                  duration="1s"
+                >
                  <div class="section-ref__item-card">
                   <custom-card-ref class="section-ref__card">
                     <div class="section-ref__card-content richtext">
@@ -43,43 +52,54 @@
                     </div>
                   </custom-card-ref>
                 </div>
+                </u-animate>
               </div>
             </template>
             <div class="section-ref__list-card --right">
-              <div class="section-ref__item-card">
-                <custom-card-ref class="section-ref__card --left">
-                  <div class="section-ref__card-content richtext">
-                    <p class="section-ref__card-txt">
-                      {{ $t('home.section.ref.ref1.content') }}
-                    </p>
-                  </div>
-                  <div class="section-ref__card-author">
-                    <span class="--strong">
-                      {{ $t('home.section.ref.ref1.author') }}
-                    </span>
-                    <span class="--full section-ref__card-link">
-                      {{ $t("home.section.ref.ref1.link") }}
-                    </span>
-                  </div>
-                </custom-card-ref>
-              </div>
-               <div class="section-ref__item-card">
-                <custom-card-ref class="section-ref__card --left">
-                  <div class="section-ref__card-content richtext">
-                    <p class="section-ref__card-txt">
-                      {{ $t('home.section.ref.ref1.content') }}
-                    </p>
-                  </div>
-                  <div class="section-ref__card-author">
-                    <span class="--strong">
-                      {{ $t('home.section.ref.ref1.author') }}
-                    </span>
-                    <span class="--full section-ref__card-link">
-                      {{ $t("home.section.ref.ref1.link") }}
-                    </span>
-                  </div>
-                </custom-card-ref>
-              </div>
+              <u-animate
+                name="bounceInRight"
+                duration=".5s"
+              >
+                <div class="section-ref__item-card">
+                  <custom-card-ref class="section-ref__card --left">
+                    <div class="section-ref__card-content richtext">
+                      <p class="section-ref__card-txt">
+                        {{ $t('home.section.ref.ref1.content') }}
+                      </p>
+                    </div>
+                    <div class="section-ref__card-author">
+                      <span class="--strong">
+                        {{ $t('home.section.ref.ref1.author') }}
+                      </span>
+                      <span class="--full section-ref__card-link">
+                        {{ $t("home.section.ref.ref1.link") }}
+                      </span>
+                    </div>
+                  </custom-card-ref>
+                </div>
+              </u-animate>
+              <u-animate
+                name="bounceInRight"
+                duration="1s"
+              >
+                <div class="section-ref__item-card">
+                  <custom-card-ref class="section-ref__card --left">
+                    <div class="section-ref__card-content richtext">
+                      <p class="section-ref__card-txt">
+                        {{ $t('home.section.ref.ref1.content') }}
+                      </p>
+                    </div>
+                    <div class="section-ref__card-author">
+                      <span class="--strong">
+                        {{ $t('home.section.ref.ref1.author') }}
+                      </span>
+                      <span class="--full section-ref__card-link">
+                        {{ $t("home.section.ref.ref1.link") }}
+                      </span>
+                    </div>
+                  </custom-card-ref>
+                </div>
+              </u-animate>
             </div>
           </custom-section>
           <div class="section-ref__list">
@@ -146,7 +166,9 @@ export default {
   .custom-section__main {
     @include mx.mq($BREAKPOINT-LG) {
       padding-right: 0;
-      padding-left: fn.rem(70)
+      padding-left: fn.rem(70);
+      border-left: 1px solid colors.$white-1;
+      border-right: none;
     }
   }
 

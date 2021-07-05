@@ -1,36 +1,40 @@
 <template>
-  <div class="the-menu">
-    <div class="the-menu__container">
-      <div class="the-menu__logo-container">
-        <slot name="logo">
-          <img
-            class="the-menu__logo"
-            :src="srcLogo"
-            alt="logo"
-          />
-        </slot>
-      </div>
-      <div class="the-menu__main-container">
-        <slot>
-          <ul class="the-menu__list">
-            <li
-              v-for="(item, index) in value"
-              :key="index"
-              :class="{
-                'the-menu__item': true,
-                '--active': item.active,
-              }"
-              @click="onClickItem(item)"
-            >
-              <span class="the-menu__item-txt">
-                {{item.name}}
-              </span>
-            </li>
-          </ul>
-        </slot>
-      </div>
+<UAnimate
+  class="the-menu"
+  name="bounceInRight"
+  duration=".5s"
+>
+  <div class="the-menu__container">
+    <div class="the-menu__logo-container">
+      <slot name="logo">
+        <img
+          class="the-menu__logo"
+          :src="srcLogo"
+          alt="logo"
+        />
+      </slot>
+    </div>
+    <div class="the-menu__main-container">
+      <slot>
+        <ul class="the-menu__list">
+          <li
+            v-for="(item, index) in value"
+            :key="index"
+            :class="{
+              'the-menu__item': true,
+              '--active': item.active,
+            }"
+            @click="onClickItem(item)"
+          >
+            <span class="the-menu__item-txt">
+              {{item.name}}
+            </span>
+          </li>
+        </ul>
+      </slot>
     </div>
   </div>
+</UAnimate>
 </template>
 
 <script>

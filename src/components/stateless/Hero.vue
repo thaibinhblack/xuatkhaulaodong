@@ -2,28 +2,37 @@
   <div class="hero">
     <div class="hero__container">
       <div class="hero__intro">
-        <slot name="intro">
-          <div class="hero__intro-container">
-            <h1
-              class="hero__title-intro"
-              v-html="$t('home.intro.title')"
-            />
-            <span class="hero__description-intro">
-              {{ description }}
-            </span>
-          </div>
-        </slot>
+        <u-animate
+          name="fadeInLeft"
+          duration="1s"
+        >
+          <slot name="intro">
+            <div class="hero__intro-container">
+              <h1
+                class="hero__title-intro"
+                v-html="title"
+              />
+              <span class="hero__description-intro">
+                {{ description }}
+              </span>
+            </div>
+          </slot>
+        </u-animate>
       </div>
-      <div :class="{
-        'hero__image-container': true,
-        '--has-menu': hasMenu,
-      }">
+      <u-animate
+        name="fadeInRight"
+        duration="1s"
+        :class="{
+          'hero__image-container': true,
+          '--has-menu': hasMenu,
+        }"
+      >
         <img
           class="hero__image"
           :src="srcImage"
           alt="image"
         />
-      </div>
+      </u-animate>
     </div>
   </div>
 </template>
@@ -33,6 +42,11 @@ export default {
   name: 'Hero',
 
   props: {
+    title: {
+      type: String,
+      default: '',
+    },
+
     srcImage: {
       type: String,
       default: '',
